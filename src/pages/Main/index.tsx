@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import style from './style.module.scss'
 import LocationIcon from '../../assets/icon-location.svg';
 import GitHubIcon from '../../assets/icon-website.svg';
@@ -8,7 +9,8 @@ import LupaIcon from '../../assets/lupa.svg';
 import Moon from '../../assets/icon-moon.svg';
 import Sun from '../../assets/icon-sun.svg';
 
-function Main({ colorTheme, setColorTheme }) {
+function Main() {
+  const [colorTheme, setColorTheme] = useState('dark');
 
   function changeColorTheme() {
     if (colorTheme === 'dark') {

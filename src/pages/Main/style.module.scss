@@ -1,6 +1,6 @@
 $bg--color--light: #F6F8FF;
 $bg--color--dark: #141D2F;
-$font--color--light: #2B3442;
+$font--color--light: #4B6A9B;
 $font--color--dark: #fff;
 $font--color--header--light: #222731;
 $font--color--header--dark: #fff;
@@ -17,12 +17,15 @@ h3 {
 .container {
   display: flex;
   flex-direction: column;
+  align-self: center;
   min-height: 100vh;
 
 
   >div {
     display: flex;
     flex-direction: column;
+    align-self: center;
+    max-width: 500px;
     padding: 0 30px;
     gap: 20px;
   }
@@ -34,9 +37,12 @@ h3 {
 
   .header {
 
-    h1,
-    button {
+    h1 {
       color: $font--color--header--light;
+    }
+
+    button {
+      color: #4B6A9B;
     }
   }
 
@@ -54,10 +60,28 @@ h3 {
 
   .main__content {
     background-color: $input--bg--color;
+
+    h3 {
+      color: #2B3442;
+    }
+
+    .user__info {
+      p:last-child {
+        color: #697C9A;
+      }
+    }
   }
 
   .user__git__info {
     background-color: #F6F8FF;
+
+    b {
+      color: #2B3442;
+    }
+  }
+
+  .user__socials {
+    color: #4B6A9B;
   }
 }
 
@@ -87,6 +111,28 @@ h3 {
 
   .main__content {
     background-color: $input--bg--color--dark;
+
+    h3 {
+      color: #fff;
+    }
+
+    .user__info {
+      p:last-child {
+        color: #fff;
+      }
+    }
+  }
+
+  .user__git__info {
+    background-color: $bg--color--dark;
+
+    b {
+      color: #fff;
+    }
+  }
+
+  .user__socials {
+    color: #fff;
   }
 }
 
@@ -99,6 +145,9 @@ h3 {
   }
 
   button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     background-color: unset;
     border: unset;
     align-self: center;
@@ -115,6 +164,7 @@ h3 {
   height: 60px;
   background-color: #1E2A47;
   position: relative;
+  padding-left: 5%;
 
   input {
     width: 100%;
@@ -122,7 +172,7 @@ h3 {
     background-color: unset;
     outline: unset;
     border: unset;
-    padding: 0 15px;
+    padding: 0 3%;
   }
 
   .search__button {
@@ -144,17 +194,16 @@ h3 {
 .main__content {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  gap: 20px;
+  gap: 30px;
   background-color: #1E2A47;
   border-radius: 12px;
+  padding: 10%;
 }
 
 .user__info {
   display: flex;
   align-items: center;
-  padding-left: 5%;
-  gap: 20px;
+  gap: 30px;
 
   img {
     width: 70px;
@@ -171,22 +220,32 @@ h3 {
     h3,
     p {
       align-self: flex-start;
-      padding: 0 20px;
+    }
+
+    h3 {
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 13px;
+    }
+
+    .username {
+      color: #0079FF;
     }
   }
 }
 
 .user__description {
   display: flex;
-  justify-content: center;
-  align-self: center;
   flex-wrap: wrap;
-  padding: 0 10px;
-  max-width: 90%;
-  align-items: center;
+  text-align: start;
 
   p {
     font-weight: 300;
+    line-height: 25px;
+    letter-spacing: 0px;
+    font-size: 14px;
   }
 }
 
@@ -196,6 +255,25 @@ h3 {
   align-self: center;
   justify-content: space-evenly;
   background-color: #141D2F;
-  width: 90%;
+  width: 100%;
   border-radius: 12px;
+  padding: 20px 0;
+
+  p {
+    font-size: 11px;
+  }
+}
+
+.user__socials {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 100%;
+  gap: 10px;
+
+  div {
+    display: flex;
+    max-width: 100%;
+    gap: 20px;
+  }
 }

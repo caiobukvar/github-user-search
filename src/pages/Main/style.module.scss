@@ -8,6 +8,8 @@ $font--color--header--dark: #fff;
 $input--bg--color: #fff;
 $input--bg--color--dark: #1E2A47;
 
+$box--shadow: 0 4px 4px rgb(75, 106, 155, .2);
+
 p,
 h3 {
   margin: 0;
@@ -31,110 +33,9 @@ h3 {
   }
 }
 
-.lightMode {
-  background-color: $bg--color--light;
-  color: $font--color--light;
 
-  .header {
 
-    h1 {
-      color: $font--color--header--light;
-    }
-
-    button {
-      color: #4B6A9B;
-    }
-  }
-
-  .search__bar {
-    background-color: $input--bg--color;
-
-    input {
-      color: #4B6A9B;
-    }
-
-    input::placeholder {
-      color: #4B6A9B;
-    }
-  }
-
-  .main__content {
-    background-color: $input--bg--color;
-
-    h3 {
-      color: #2B3442;
-    }
-
-    .user__info {
-      p:last-child {
-        color: #697C9A;
-      }
-    }
-  }
-
-  .user__git__info {
-    background-color: #F6F8FF;
-
-    b {
-      color: #2B3442;
-    }
-  }
-
-  .user__socials {
-    color: #4B6A9B;
-  }
-}
-
-.darkMode {
-  background-color: $bg--color--dark;
-  color: $font--color--dark;
-
-  .header {
-
-    h1,
-    button {
-      color: $font--color--header--dark;
-    }
-  }
-
-  .search__bar {
-    background-color: $input--bg--color--dark;
-
-    input {
-      color: #fff;
-    }
-
-    input::placeholder {
-      color: #fff;
-    }
-  }
-
-  .main__content {
-    background-color: $input--bg--color--dark;
-
-    h3 {
-      color: #fff;
-    }
-
-    .user__info {
-      p:last-child {
-        color: #fff;
-      }
-    }
-  }
-
-  .user__git__info {
-    background-color: $bg--color--dark;
-
-    b {
-      color: #fff;
-    }
-  }
-
-  .user__socials {
-    color: #fff;
-  }
-}
+// codigo sem tema
 
 .header {
   display: flex;
@@ -173,6 +74,7 @@ h3 {
     outline: unset;
     border: unset;
     padding: 0 3%;
+    font-family: 'Space Grotesk', sans-serif;
   }
 
   .search__button {
@@ -275,5 +177,114 @@ h3 {
     display: flex;
     max-width: 100%;
     gap: 20px;
+  }
+}
+
+// ! tema light 
+.lightMode {
+  background-color: $bg--color--light;
+  color: $font--color--light;
+
+  .header {
+
+    h1 {
+      color: $font--color--header--light;
+    }
+
+    button {
+      color: #4B6A9B;
+    }
+  }
+
+  .search__bar {
+    background-color: $input--bg--color;
+    box-shadow: $box--shadow;
+
+    input {
+      color: #4B6A9B;
+    }
+
+    input::placeholder {
+      color: #4B6A9B;
+    }
+  }
+
+  .main__content {
+    background-color: $input--bg--color;
+    box-shadow: $box--shadow;
+
+    h3 {
+      color: #2B3442;
+    }
+
+    .user__info {
+      p:last-child {
+        color: #697C9A;
+      }
+    }
+  }
+
+  .user__git__info {
+    background-color: #F6F8FF;
+
+    b {
+      color: #2B3442;
+    }
+  }
+
+  .user__socials {
+    color: #4B6A9B;
+  }
+}
+
+// ! tema dark 
+.darkMode {
+  background-color: $bg--color--dark;
+  color: $font--color--dark;
+
+  .header {
+
+    h1,
+    button {
+      color: $font--color--header--dark;
+    }
+  }
+
+  .search__bar {
+    background-color: $input--bg--color--dark;
+
+    input {
+      color: #fff;
+    }
+
+    input::placeholder {
+      color: #fff;
+    }
+  }
+
+  .main__content {
+    background-color: $input--bg--color--dark;
+
+    h3 {
+      color: #fff;
+    }
+
+    .user__info {
+      p:last-child {
+        color: #fff;
+      }
+    }
+  }
+
+  .user__git__info {
+    background-color: $bg--color--dark;
+
+    b {
+      color: #fff;
+    }
+  }
+
+  .user__socials {
+    color: #fff;
   }
 }
